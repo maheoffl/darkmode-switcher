@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <p class="label">dark</p>
+        <div class="switch">
+          <div class="handle moveright"></div>
+        </div>
+        <p class="label">light</p>
+      </div>
+    </div>
+
+    <script>
+      const switchbtn = document.querySelector(".switch");
+      const handle = document.querySelector(".handle");
+      let main = document.querySelector(".main");
+      let move = document.querySelector(".moveright");
+      let flag = 0;
+
+      switchbtn.addEventListener("click", () => {
+        if (flag === 0) {
+          console.log("hey");
+          main.style.backgroundColor = "white";
+          main.style.color = "black";
+          move.style.transform = "translateX(30px)";
+        //   move.style.backgroundColor = "black";
+          flag = 1;
+        } else {
+          main.style.backgroundColor = "black";
+          main.style.color = "white";
+          move.style.transform = "translateX(0px)";
+          console.log("bro");
+          flag = 0;
+        }
+      });
+    </script>
+  </body>
+</html>
